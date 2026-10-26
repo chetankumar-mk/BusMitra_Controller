@@ -1,0 +1,64 @@
+/* Page content is now handled by MainLayout */
+
+.page-header {
+  margin-bottom: var(--spacing-xl);
+}
+
+.page-header h2 {
+  font-size: var(--font-size-page-title);
+  font-weight: var(--font-weight-page-title);
+  color: var(--color-text-main);
+  margin-bottom: var(--spacing-xs);
+}
+
+.page-subtitle {
+  color: var(--color-text-secondary);
+  font-size: var(--font-size-page-subtitle);
+}
+
+.placeholder-content {
+  background: white;
+  padding: 3rem;
+  border-radius: 8px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.placeholder-icon {
+  font-size: 4rem;
+  margin-bottom: var(--spacing-xl);
+  color: var(--color-text-muted);
+}
+
+.placeholder-content h3 {
+  font-size: var(--font-size-page-title);
+  color: var(--color-text-main);
+  margin-bottom: var(--spacing-md);
+}
+
+.placeholder-content p {
+  color: var(--color-text-secondary);
+  font-size: var(--font-size-body);
+  margin-bottom: var(--spacing-md);
+}
+
+.placeholder-content ul {
+  text-align: left;
+  color: var(--color-text-secondary);
+  font-size: var(--font-size-body);
+  max-width: 400px;
+  margin: 0 auto;
+  padding-left: 1.5rem;
+}
+
+.placeholder-content li {
+  margin-bottom: var(--spacing-xs);
+}
+
+.placeholder-description {
+  font-size: var(--font-size-body);
+  color: var(--color-text-secondary);
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.6;
+}

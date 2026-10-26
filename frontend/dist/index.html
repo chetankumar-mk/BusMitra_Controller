@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="BusMitra Controller - Fleet management and bus operations control room dashboard" />
+    <meta property="og:title" content="BusMitra Controller" />
+    <meta property="og:description" content="Fleet management and bus operations control room dashboard" />
+    <meta name="theme-color" content="#0B1F3A" />
+    <title>BusMitra Controller</title>
+    <script>
+      (function() {
+        try {
+          const saved = localStorage.getItem('busmitra-theme');
+          let theme = 'light';
+          if (saved === 'dark' || saved === 'light') {
+            theme = saved;
+          } else if (saved === 'system' || !saved) {
+            theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+          }
+          document.documentElement.setAttribute('data-theme', theme);
+          // Update theme-color meta tag based on theme
+          const themeColor = theme === 'dark' ? '#07182D' : '#0B1F3A';
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', themeColor);
+        } catch (e) {
+          document.documentElement.setAttribute('data-theme', 'light');
+        }
+      })();
+    </script>
+    <script type="module" crossorigin src="/assets/index-T3HQ1hYR.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index-BDPnfrmm.css">
+  </head>
+  <body>
+    <div id="root"></div>
+  </body>
+</html>

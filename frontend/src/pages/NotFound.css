@@ -1,0 +1,47 @@
+.not-found-page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--surface-page);
+  padding: var(--spacing-6);
+}
+
+.not-found-content {
+  text-align: center;
+  max-width: 480px;
+}
+
+.not-found-icon {
+  width: 120px;
+  height: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(220, 38, 38, 0.1);
+  border-radius: var(--radius-xl);
+  color: var(--color-danger);
+  margin: 0 auto var(--spacing-6);
+}
+
+.not-found-title {
+  font-size: 72px;
+  font-weight: var(--font-weight-bold);
+  color: var(--text-primary);
+  margin: 0 0 var(--spacing-2) 0;
+  line-height: 1;
+}
+
+.not-found-subtitle {
+  font-size: var(--font-size-2xl);
+  font-weight: var(--font-weight-semibold);
+  color: var(--text-primary);
+  margin: 0 0 var(--spacing-3) 0;
+}
+
+.not-found-description {
+  font-size: var(--font-size-base);
+  color: var(--text-secondary);
+  margin: 0 0 var(--spacing-8) 0;
+  line-height: var(--line-height-relaxed);
+}

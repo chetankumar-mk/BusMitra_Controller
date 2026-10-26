@@ -1,0 +1,94 @@
+.command-palette {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-4);
+}
+
+.command-results {
+  max-height: 400px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-4);
+}
+
+.command-results::-webkit-scrollbar {
+  width: 6px;
+}
+
+.command-results::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.command-results::-webkit-scrollbar-thumb {
+  background: var(--border-strong);
+  border-radius: 3px;
+}
+
+.command-section-label {
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-semibold);
+  color: var(--text-muted);
+  padding: var(--spacing-2) var(--spacing-3);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.command-item {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-3);
+  width: 100%;
+  padding: var(--spacing-3) var(--spacing-4);
+  background: none;
+  border: none;
+  border-radius: var(--radius-md);
+  color: var(--text-primary);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-medium);
+  cursor: pointer;
+  transition: background var(--duration-fast) var(--ease-out);
+  text-align: left;
+}
+
+.command-item:hover {
+  background: var(--surface-sunken);
+}
+
+.command-item-selected {
+  background: var(--color-brand-primary);
+  color: white;
+}
+
+.command-empty {
+  padding: var(--spacing-8);
+  text-align: center;
+  color: var(--text-muted);
+  font-size: var(--font-size-sm);
+}
+
+.command-footer {
+  display: flex;
+  justify-content: center;
+  gap: var(--spacing-6);
+  padding-top: var(--spacing-4);
+  border-top: 1px solid var(--border-subtle);
+}
+
+.command-hint {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-2);
+  font-size: var(--font-size-xs);
+  color: var(--text-muted);
+}
+
+.command-hint kbd {
+  padding: var(--spacing-1) var(--spacing-2);
+  background: var(--surface-sunken);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-sm);
+  font-family: var(--font-family-mono);
+  font-size: var(--font-size-xs);
+  color: var(--text-secondary);
+}

@@ -1,0 +1,26 @@
+#root {
+  width: 100%;
+  min-height: 100vh;
+}
+
+/* Page Transition Animation */
+.page-transition {
+  animation: page-fade-in var(--duration-normal) var(--ease-out);
+}
+
+@keyframes page-fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .page-transition {
+    animation: none;
+  }
+}

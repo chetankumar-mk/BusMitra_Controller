@@ -1,0 +1,193 @@
+.driver-integration-page {
+  padding: 0;
+}
+
+.page-header {
+  margin-bottom: 24px;
+}
+
+.page-header h2 {
+  font-size: 24px;
+  font-weight: 600;
+  color: #0F172A;
+  margin: 0 0 8px 0;
+}
+
+.page-subtitle {
+  font-size: 14px;
+  color: #64748B;
+  margin: 0;
+}
+
+.loading-state,
+.error-state,
+.empty-state {
+  background: #FFFFFF;
+  padding: 32px;
+  border-radius: 8px;
+  text-align: center;
+  color: #64748B;
+}
+
+.error-state {
+  color: #DC2626;
+  background: #FEF2F2;
+}
+
+.empty-hint {
+  font-size: 12px;
+  color: #94A3B8;
+  margin-top: 8px;
+}
+
+/* KPI Grid */
+.kpi-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.kpi-card {
+  background: #FFFFFF;
+  border: 1px solid #E2E8F0;
+  border-radius: 8px;
+  padding: 16px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+.kpi-label {
+  font-size: 12px;
+  color: #64748B;
+  font-weight: 500;
+  margin-bottom: 8px;
+}
+
+.kpi-value {
+  font-size: 32px;
+  font-weight: 600;
+  color: #0F172A;
+  margin-bottom: 4px;
+}
+
+.kpi-supporting {
+  font-size: 12px;
+  color: #94A3B8;
+}
+
+/* Integration Section */
+.integration-section {
+  margin-bottom: 24px;
+}
+
+.section-header {
+  margin-bottom: 16px;
+}
+
+.section-header h2 {
+  font-size: 16px;
+  font-weight: 600;
+  color: #0F172A;
+  margin: 0;
+}
+
+.status-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 16px;
+}
+
+.status-card {
+  background: #FFFFFF;
+  border: 1px solid #E2E8F0;
+  border-radius: 8px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+.status-card-header {
+  padding: 16px;
+  border-bottom: 1px solid #E2E8F0;
+  background: #F8FAFC;
+}
+
+.status-card-header h3 {
+  font-size: 14px;
+  font-weight: 600;
+  color: #0F172A;
+  margin: 0;
+}
+
+.status-card-body {
+  padding: 16px;
+}
+
+.status-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 0;
+}
+
+.status-label {
+  font-size: 14px;
+  color: #64748B;
+  font-weight: 500;
+}
+
+.status-value {
+  font-size: 14px;
+  color: #0F172A;
+  font-weight: 500;
+}
+
+/* Info Section */
+.info-section {
+  margin-bottom: 24px;
+}
+
+.info-card {
+  background: #FFFFFF;
+  border: 1px solid #E2E8F0;
+  border-radius: 8px;
+  padding: 24px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+.info-description {
+  font-size: 14px;
+  color: #64748B;
+  margin: 0 0 16px 0;
+}
+
+.api-endpoints {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.api-endpoints li {
+  padding: 12px 0;
+  border-bottom: 1px solid #E2E8F0;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.api-endpoints li:last-child {
+  border-bottom: none;
+}
+
+.api-endpoints code {
+  font-family: 'Courier New', monospace;
+  font-size: 13px;
+  color: #2563EB;
+  background: #F0F9FF;
+  padding: 4px 8px;
+  border-radius: 4px;
+}
+
+.api-endpoints span {
+  font-size: 12px;
+  color: #94A3B8;
+}
+

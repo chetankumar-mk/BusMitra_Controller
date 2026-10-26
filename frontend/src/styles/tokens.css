@@ -1,0 +1,209 @@
+/**
+ * BusMitra Controller Design Tokens
+ * Design system foundation with CSS custom properties
+ */
+
+:root {
+  /* ========================================
+     BRAND COLORS
+     ======================================== */
+  --color-brand-primary: #2563EB;
+  --color-brand-primary-hover: #1D4ED8;
+  --color-brand-primary-light: rgba(37, 99, 235, 0.1);
+  --color-brand-navy: #0B1F3A;
+  --color-brand-navy-secondary: #12345B;
+  --color-brand-navy-dark: #07182D;
+
+  /* ========================================
+     SEMANTIC COLORS
+     ======================================== */
+  --color-success: #16A34A;
+  --color-success-bg: rgba(22, 163, 74, 0.1);
+  --color-success-text: #15803D;
+
+  --color-warning: #F59E0B;
+  --color-warning-bg: rgba(245, 158, 11, 0.1);
+  --color-warning-text: #B45309;
+
+  --color-danger: #DC2626;
+  --color-danger-bg: rgba(220, 38, 38, 0.1);
+  --color-danger-text: #B91C1C;
+
+  --color-info: #0EA5E9;
+  --color-info-bg: rgba(14, 165, 233, 0.1);
+  --color-info-text: #0369A1;
+
+  /* ========================================
+     NEUTRAL SCALE (Light Theme)
+     ======================================== */
+  --color-neutral-50: #F8FAFC;
+  --color-neutral-100: #F1F5F9;
+  --color-neutral-200: #E2E8F0;
+  --color-neutral-300: #CBD5E1;
+  --color-neutral-400: #94A3B8;
+  --color-neutral-500: #64748B;
+  --color-neutral-600: #475569;
+  --color-neutral-700: #334155;
+  --color-neutral-800: #1E293B;
+  --color-neutral-900: #0F172A;
+  --color-neutral-950: #020617;
+
+  /* ========================================
+     SEMANTIC SURFACES (Light Theme)
+     ======================================== */
+  --surface-page: #F8FAFC;
+  --surface-card: #FFFFFF;
+  --surface-raised: #FFFFFF;
+  --surface-sunken: #F1F5F9;
+  --border-subtle: #E2E8F0;
+  --border-strong: #CBD5E1;
+
+  --text-primary: #0F172A;
+  --text-secondary: #475569;
+  --text-muted: #64748B;
+  --text-inverse: #FFFFFF;
+
+  /* ========================================
+     DARK THEME
+     ======================================== */
+  [data-theme="dark"] {
+    --surface-page: #0B1F3A;
+    --surface-card: #12345B;
+    --surface-raised: #163A63;
+    --surface-sunken: #07182D;
+    --border-subtle: rgba(255, 255, 255, 0.1);
+    --border-strong: rgba(255, 255, 255, 0.2);
+
+    --text-primary: #F8FAFC;
+    --text-secondary: #CBD5E1;
+    --text-muted: #94A3B8;
+    --text-inverse: #0B1F3A;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --surface-page: #0B1F3A;
+      --surface-card: #12345B;
+      --surface-raised: #163A63;
+      --surface-sunken: #07182D;
+      --border-subtle: rgba(255, 255, 255, 0.1);
+      --border-strong: rgba(255, 255, 255, 0.2);
+
+      --text-primary: #F8FAFC;
+      --text-secondary: #CBD5E1;
+      --text-muted: #94A3B8;
+      --text-inverse: #0B1F3A;
+    }
+  }
+
+  /* ========================================
+     SPACING SCALE (4px base)
+     ======================================== */
+  --spacing-0: 0;
+  --spacing-1: 4px;
+  --spacing-2: 8px;
+  --spacing-3: 12px;
+  --spacing-4: 16px;
+  --spacing-5: 20px;
+  --spacing-6: 24px;
+  --spacing-8: 32px;
+  --spacing-10: 40px;
+  --spacing-12: 48px;
+  --spacing-16: 64px;
+  --spacing-20: 80px;
+  --spacing-24: 96px;
+
+  /* ========================================
+     BORDER RADIUS
+     ======================================== */
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+  --radius-xl: 16px;
+  --radius-full: 9999px;
+
+  /* ========================================
+     SHADOWS
+     ======================================== */
+  --shadow-xs: 0 1px 2px rgba(0, 0, 0, 0.05);
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.1), 0 1px 2px rgba(0, 0, 0, 0.06);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  --shadow-focus: 0 0 0 3px rgba(37, 99, 235, 0.3);
+  --shadow-glow: 0 0 20px rgba(37, 99, 235, 0.4);
+
+  /* ========================================
+     Z-INDEX SCALE
+     ======================================== */
+  --z-dropdown: 1000;
+  --z-sticky: 1020;
+  --z-fixed: 1030;
+  --z-modal-backdrop: 1040;
+  --z-modal: 1050;
+  --z-popover: 1060;
+  --z-tooltip: 1070;
+  --z-toast: 1080;
+
+  /* ========================================
+     MOTION
+     ======================================== */
+  --duration-fast: 120ms;
+  --duration-normal: 200ms;
+  --duration-slow: 320ms;
+  --ease-in: cubic-bezier(0.4, 0, 1, 1);
+  --ease-out: cubic-bezier(0, 0, 0.2, 1);
+  --ease-in-out: cubic-bezier(0.4, 0, 0.2, 1);
+
+  /* ========================================
+     TYPOGRAPHY
+     ======================================== */
+  --font-family-ui: 'Inter Variable', system-ui, -apple-system, sans-serif;
+  --font-family-mono: 'JetBrains Mono Variable', 'SF Mono', 'Consolas', monospace;
+
+  --font-size-xs: 11px;
+  --font-size-sm: 12px;
+  --font-size-base: 14px;
+  --font-size-md: 16px;
+  --font-size-lg: 18px;
+  --font-size-xl: 20px;
+  --font-size-2xl: 24px;
+  --font-size-3xl: 30px;
+  --font-size-4xl: 36px;
+
+  --font-weight-normal: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+
+  --line-height-tight: 1.25;
+  --line-height-normal: 1.5;
+  --line-height-relaxed: 1.75;
+
+  --letter-spacing-tight: -0.025em;
+  --letter-spacing-normal: 0;
+  --letter-spacing-wide: 0.025em;
+
+  /* ========================================
+     LAYOUT
+     ======================================== */
+  --layout-sidebar-width: 260px;
+  --layout-header-height: 64px;
+  --layout-max-width: 1400px;
+  --layout-content-width: 1200px;
+  --layout-page-max-width: 1680px;
+
+  /* ========================================
+     LEGACY ALIASES (for existing CSS)
+     ======================================== */
+  --color-text-main: var(--text-primary);
+  --color-text-secondary: var(--text-secondary);
+  --color-text-muted: var(--text-muted);
+  --font-size-body: var(--font-size-base);
+  --font-size-page-title: var(--font-size-3xl);
+  --font-size-page-subtitle: var(--font-size-lg);
+  --font-weight-page-title: var(--font-weight-bold);
+  --spacing-xs: var(--spacing-1);
+  --spacing-md: var(--spacing-4);
+  --spacing-xl: var(--spacing-6);
+}

@@ -1,0 +1,208 @@
+.fleet-table {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-4);
+}
+
+.table-toolbar {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-4);
+  padding: var(--spacing-4);
+  border-bottom: 1px solid var(--border-subtle);
+  background: var(--surface-raised);
+  flex-wrap: wrap;
+}
+
+.table-search {
+  width: 360px;
+  max-width: 100%;
+  flex-shrink: 0;
+}
+
+.table-filters {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-2);
+  flex-wrap: wrap;
+  flex: 1;
+}
+
+.filter-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--spacing-1);
+  padding: var(--spacing-1) var(--spacing-3);
+  background: var(--surface-card);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-full);
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-medium);
+  color: var(--text-secondary);
+  cursor: pointer;
+  transition: all var(--duration-fast) var(--ease-out);
+}
+
+.filter-chip:hover {
+  background: var(--surface-raised);
+  border-color: var(--border-strong);
+  color: var(--text-primary);
+}
+
+.filter-chip:focus-visible {
+  outline: 2px solid var(--color-brand-primary);
+  outline-offset: -2px;
+}
+
+.filter-chip-active {
+  background: var(--color-brand-primary);
+  border-color: var(--color-brand-primary);
+  color: white;
+}
+
+.filter-count {
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-semibold);
+  opacity: 0.8;
+}
+
+.table-stats {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-2);
+  flex-shrink: 0;
+  margin-left: auto;
+}
+
+.result-count {
+  font-size: var(--font-size-xs);
+  color: var(--text-muted);
+}
+
+.table-scroll {
+  overflow-x: auto;
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-lg);
+  background: var(--surface-card);
+}
+
+.data-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: var(--font-size-sm);
+}
+
+.data-table thead {
+  background: var(--surface-raised);
+  border-bottom: 1px solid var(--border-subtle);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.data-table th {
+  padding: var(--spacing-3) var(--spacing-4);
+  font-weight: var(--font-weight-semibold);
+  color: var(--text-secondary);
+  font-size: var(--font-size-xs);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  white-space: nowrap;
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.data-table th:not([aria-sort="none"]) {
+  color: var(--text-primary);
+}
+
+.sort-button {
+  background: none;
+  border: none;
+  color: inherit;
+  font: inherit;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-1);
+  padding: 0;
+  transition: color var(--duration-fast) var(--ease-out);
+}
+
+.sort-button:hover {
+  color: var(--text-primary);
+}
+
+.sort-button:focus-visible {
+  outline: 2px solid var(--color-brand-primary);
+  outline-offset: -2px;
+  border-radius: var(--radius-sm);
+}
+
+.sort-icon {
+  font-size: 10px;
+  color: var(--text-muted);
+}
+
+.data-table tbody tr {
+  border-bottom: 1px solid var(--border-subtle);
+  transition: background-color var(--duration-fast) var(--ease-out);
+}
+
+.data-table tbody tr:hover {
+  background: var(--surface-raised);
+}
+
+.data-table tbody tr:focus-visible {
+  outline: 2px solid var(--color-brand-primary);
+  outline-offset: -2px;
+  background: var(--surface-raised);
+}
+
+.data-table tbody tr:last-child {
+  border-bottom: none;
+}
+
+.data-table td {
+  padding: var(--spacing-3) var(--spacing-4);
+  color: var(--text-primary);
+}
+
+.table-row {
+  cursor: pointer;
+}
+
+.cell-bus {
+  font-weight: var(--font-weight-semibold);
+  color: var(--text-primary);
+}
+
+.cell-driver,
+.cell-route,
+.cell-location {
+  color: var(--text-secondary);
+  max-width: 200px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.cell-time {
+  font-family: var(--font-family-mono);
+  font-size: var(--font-size-xs);
+  color: var(--text-secondary);
+}
+
+.cell-mono {
+  font-family: var(--font-family-mono);
+}
+
+@media (max-width: 1024px) {
+  .table-toolbar {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  
+  .table-stats {
+    margin-left: 0;
+  }
+}

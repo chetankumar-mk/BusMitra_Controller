@@ -1,0 +1,30 @@
+.spinner {
+  animation: spin 1s linear infinite;
+}
+
+.spinner-track {
+  stroke: var(--color-neutral-200);
+}
+
+[data-theme="dark"] .spinner-track {
+  stroke: rgba(255, 255, 255, 0.1);
+}
+
+.spinner-path {
+  stroke: var(--color-brand-primary);
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .spinner {
+    animation: none;
+  }
+}

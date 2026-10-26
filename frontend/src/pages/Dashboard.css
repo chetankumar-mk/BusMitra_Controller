@@ -1,0 +1,126 @@
+/* Dashboard Container - no padding/min-height/background since MainLayout provides it */
+.dashboard {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-6);
+}
+
+/* Header Actions */
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-3);
+  flex-wrap: wrap;
+}
+
+.update-time {
+  font-size: var(--font-size-sm);
+  color: var(--text-secondary);
+}
+
+/* Poll Error Banner */
+.poll-error-banner {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-2);
+  padding: var(--spacing-3) var(--spacing-4);
+  background: var(--color-warning-bg);
+  border: 1px solid var(--color-warning-border);
+  border-radius: var(--radius-md);
+  color: var(--color-warning-text);
+  font-size: var(--font-size-sm);
+}
+
+/* Dashboard Content */
+.dashboard-content {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-6);
+}
+
+/* Dashboard Grid - Map + Sidebar */
+.dashboard-grid {
+  display: grid;
+  grid-template-columns: 1fr 340px;
+  gap: var(--spacing-4);
+}
+
+.map-section {
+  min-width: 0;
+}
+
+.sidebar-section {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-4);
+  min-width: 0;
+}
+
+.sidebar-card {
+  background: var(--surface-card);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-lg);
+  padding: var(--spacing-4);
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-4);
+}
+
+.gps-coverage {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: var(--spacing-3);
+  border-top: 1px solid var(--border-subtle);
+}
+
+.gps-label {
+  font-size: var(--font-size-xs);
+  color: var(--text-secondary);
+}
+
+.gps-value {
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-semibold);
+  color: var(--text-primary);
+}
+
+/* Table Section */
+.table-section {
+  margin-top: var(--spacing-2);
+}
+
+/* Responsive Design */
+@media (max-width: 1440px) {
+  .dashboard-grid {
+    grid-template-columns: 1fr 300px;
+  }
+}
+
+@media (max-width: 1280px) {
+  .dashboard-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .sidebar-section {
+    order: -1;
+  }
+}
+
+@media (max-width: 1024px) {
+  .header-actions {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--spacing-2);
+  }
+}
+
+@media (max-width: 768px) {
+  .dashboard {
+    gap: var(--spacing-4);
+  }
+  
+  .dashboard-content {
+    gap: var(--spacing-4);
+  }
+}

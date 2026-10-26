@@ -1,0 +1,58 @@
+.bm-filter-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-1);
+}
+
+.bm-filter-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--spacing-1);
+  padding: var(--spacing-1) var(--spacing-2);
+  background: var(--surface-raised);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-sm);
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-medium);
+  color: var(--text-secondary);
+  cursor: pointer;
+  transition: all var(--duration-fast) var(--ease-out);
+}
+
+.bm-filter-chip:hover {
+  background: var(--surface-sunken);
+  border-color: var(--border-strong);
+  color: var(--text-primary);
+}
+
+.bm-filter-chip:focus-visible {
+  outline: 2px solid var(--color-brand-primary);
+  outline-offset: -2px;
+}
+
+.bm-filter-chip-active {
+  background: var(--color-brand-primary);
+  border-color: var(--color-brand-primary);
+  color: white;
+}
+
+.bm-filter-chip-active:hover {
+  background: var(--color-brand-primary-hover);
+}
+
+.bm-filter-label {
+  white-space: nowrap;
+}
+
+.bm-filter-count {
+  font-weight: var(--font-weight-semibold);
+  opacity: 0.8;
+  font-family: var(--font-family-mono);
+  font-feature-settings: 'tnum';
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .bm-filter-chip {
+    transition: none;
+  }
+}

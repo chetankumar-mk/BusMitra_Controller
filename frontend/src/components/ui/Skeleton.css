@@ -1,0 +1,31 @@
+.skeleton-rect {
+  display: block;
+  border-radius: var(--radius-sm);
+}
+
+.skeleton-circle {
+  border-radius: var(--radius-full);
+}
+
+.skeleton-text {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-2);
+}
+
+.skeleton-text-line {
+  height: 16px;
+  border-radius: var(--radius-sm);
+}
+
+.skeleton-table-row {
+  display: flex;
+  gap: var(--spacing-4);
+  padding: var(--spacing-4) 0;
+}
+
+.skeleton-table-cell {
+  flex: 1;
+  height: 40px;
+  border-radius: var(--radius-sm);
+}
